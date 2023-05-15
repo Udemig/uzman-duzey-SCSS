@@ -1,0 +1,58 @@
+body {
+  background-color: yellow;
+}
+
+.ana-sekme {
+  background-color: aqua;
+  padding: 4px;
+  border: 2px solid;
+}
+.ana-sekme .alt-sekme {
+  background-color: blanchedalmond;
+  padding: 5px;
+}
+
+.card {
+  width: 100px;
+  padding: 40px;
+  background: crimson;
+  color: white;
+  border: 2px solid white;
+}
+.card-head {
+  background-color: white;
+}
+.card-body {
+  background-color: red;
+}
+
+.yeni-eleman {
+  width: 300px;
+  height: 300px;
+  border: 2px solid aqua;
+  background-color: white;
+}
+@media (max-width: 1000px) {
+  .yeni-eleman {
+    background-color: chartreuse;
+  }
+}
+
+.danger, .success, .alert {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  width: 200px;
+}
+
+.alert {
+  background: yellow;
+}
+
+.success {
+  background-color: green;
+}
+
+.danger {
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */

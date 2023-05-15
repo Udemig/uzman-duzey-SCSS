@@ -1,0 +1,21 @@
+@mixin card {
+  width: 100px;
+  padding: 40px;
+  background: crimson;
+  color: white;
+  border: 2px solid white;
+}
+
+// dışarıdan değer alıyor
+@mixin kutu($genislik, $renk) {
+  width: $genislik;
+  height: $genislik;
+  border: 2px solid $renk;
+}
+
+// yalnızca 1000px altında çalışan stiller
+@mixin mobile {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}

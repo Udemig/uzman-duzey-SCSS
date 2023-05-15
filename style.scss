@@ -1,0 +1,75 @@
+// diğer dosylardan stil getirme
+@import 'variable';
+@import 'blocks';
+
+body {
+  background-color: $ana-renk;
+}
+
+// iç içe elemanlar
+
+.ana-sekme {
+  background-color: aqua;
+  padding: 4px;
+  border: 2px solid;
+  .alt-sekme {
+    background-color: blanchedalmond;
+    padding: 5px;
+  }
+}
+// eski yöntem
+.ana-sekme {
+}
+.ana-sekme .alt-sekme {
+}
+
+// yeni yötem
+.ana-sekme {
+  .alt-sekme {
+    .en-alt {
+    }
+  }
+}
+
+// aynı isimle başlayan elemanlar > &
+.card {
+  @include card;
+
+  &-head {
+    background-color: white;
+  }
+  &-body {
+    background-color: red;
+  }
+}
+
+//
+.yeni-eleman {
+  @include kutu(300px, aqua);
+  background-color: white;
+  @include mobile {
+    background-color: chartreuse;
+  }
+}
+
+// miras alma > @extend
+
+%mesaj {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  width: 200px;
+}
+
+.alert {
+  @extend %mesaj;
+  background: yellow;
+}
+.success {
+  @extend %mesaj;
+  background-color: green;
+}
+.danger {
+  @extend %mesaj;
+  background-color: red;
+}
